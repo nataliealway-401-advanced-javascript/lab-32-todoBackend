@@ -19,6 +19,11 @@ function getModel(req, res, next) {
   }
 }
 
+//Home route
+router.get('/', (req, res) => {
+  res.send('Main page');
+});
+
 router.param('model', getModel);
 
 // Routes ---------------------------
