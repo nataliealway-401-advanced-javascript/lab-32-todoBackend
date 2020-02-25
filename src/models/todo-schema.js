@@ -1,13 +1,14 @@
 'use strict';
 const mongoose = require('mongoose');
 
-const items = mongoose.Schema({
-  name: {type: String},
-  assignedTo:{ type: String},
-  due: { type: String},
-  complete: { type: String},
-  difficulty: {type: String}
+const todoSchema = mongoose.Schema({
+  text: { type: String },
+  _id: { type: String },
+  assignee: { type: String },
+  complete: { type: Boolean },
+  difficulty: { type: String },
+  due: { type: String }
 });
 
 
-module.exports = mongoose.model('items', items);
+module.exports = mongoose.model('todoSchema', todoSchema);
